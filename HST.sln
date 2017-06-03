@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HST", "HST\HST.csproj", "{F06AA4D4-B43D-42D9-AE6E-7428EFAA39DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HST.Tests", "HST.Tests\HST.Tests.csproj", "{E96FB5CF-61D3-483A-AB9B-47DB72857656}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F06AA4D4-B43D-42D9-AE6E-7428EFAA39DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F06AA4D4-B43D-42D9-AE6E-7428EFAA39DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F06AA4D4-B43D-42D9-AE6E-7428EFAA39DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F06AA4D4-B43D-42D9-AE6E-7428EFAA39DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E96FB5CF-61D3-483A-AB9B-47DB72857656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96FB5CF-61D3-483A-AB9B-47DB72857656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96FB5CF-61D3-483A-AB9B-47DB72857656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96FB5CF-61D3-483A-AB9B-47DB72857656}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

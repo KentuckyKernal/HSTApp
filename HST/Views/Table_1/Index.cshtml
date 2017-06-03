@@ -1,0 +1,100 @@
+﻿@model IEnumerable<HST.Models.Table_1>
+
+@{
+    ViewBag.Title = "Index";
+}
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">HST</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="@Url.Action("LearnMore", "Home")">Learn More</a></li>
+                <li><a href="@Url.Action("Notes", "Home")">Notes</a></li>
+                <li><a href="@Url.Action("GetStarted", "Home")">Get Started</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+<h2><b> List Of Exercises & Rep Maxes</b></h2>
+<br>
+<hr>
+<br>
+<p>All of your entries to date can be seen and modified below.
+    <ul>
+        <li>To add a new entry select the Create New link</li>
+     <li>To delete any particular entry select the Delete link in the given row.</li>
+     
+     <li>If you are cycle 2 enter the create a new entry before deleting the old to ensure 
+         you are raising the weight of your Rep Maxes by 5-10lbs ~ (2.25 - 5kg)</li>
+    </ul>
+    <br>
+    <p>
+    <p><a class="btn btn-info" href="@Url.Action("Create", "Table_1")">Create New Entry &raquo;</a></p>
+</p>
+    <br>
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Exercise)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RM15)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WI15)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RM10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WI10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RM5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WI5)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Exercise)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RM15)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WI15)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RM10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WI10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RM5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WI5)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+</div>

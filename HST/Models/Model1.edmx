@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Table_1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Exercise" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="RM15" Type="float" Nullable="false" />
+          <Property Name="WI15" Type="float" Nullable="false" />
+          <Property Name="RM10" Type="float" Nullable="false" />
+          <Property Name="WI10" Type="float" Nullable="false" />
+          <Property Name="RM5" Type="float" Nullable="false" />
+          <Property Name="WI5" Type="float" Nullable="false" />
+        </EntityType>
+        <Function Name="Order01" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order02" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order03" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order04" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order05" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order06" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order07" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order08" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order09" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order10" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order11" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order12" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order13" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order14" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order15" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order16" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order17" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Order18" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="Table_1" EntityType="Self.Table_1" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Table_1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Exercise" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RM15" Type="Double" Nullable="false" />
+          <Property Name="WI15" Type="Double" Nullable="false" />
+          <Property Name="RM10" Type="Double" Nullable="false" />
+          <Property Name="WI10" Type="Double" Nullable="false" />
+          <Property Name="RM5" Type="Double" Nullable="false" />
+          <Property Name="WI5" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Table_1" EntityType="Self.Table_1" />
+          <FunctionImport Name="GetOrder01" ReturnType="Collection(Database1Model.Order001)" />
+          <FunctionImport Name="GetOrder02" ReturnType="Collection(Database1Model.Order002)" />
+          <FunctionImport Name="GetOrder03" ReturnType="Collection(Database1Model.Order003)" />
+          <FunctionImport Name="GetOrder04" ReturnType="Collection(Database1Model.Order004)" />
+          <FunctionImport Name="GetOrder05" ReturnType="Collection(Database1Model.Order005)" />
+          <FunctionImport Name="GetOrder06" ReturnType="Collection(Database1Model.Order006)" />
+          <FunctionImport Name="GetOrder07" ReturnType="Collection(Database1Model.Order007)" />
+          <FunctionImport Name="GetOrder08" ReturnType="Collection(Database1Model.Order008)" />
+          <FunctionImport Name="GetOrder09" ReturnType="Collection(Database1Model.Order009)" />
+          <FunctionImport Name="GetOrder10" ReturnType="Collection(Database1Model.Order010)" />
+          <FunctionImport Name="GetOrder11" ReturnType="Collection(Database1Model.Order011)" />
+          <FunctionImport Name="GetOrder12" ReturnType="Collection(Database1Model.Order012)" />
+          <FunctionImport Name="GetOrder13" ReturnType="Collection(Database1Model.Order013)" />
+          <FunctionImport Name="GetOrder14" ReturnType="Collection(Database1Model.Order014)" />
+          <FunctionImport Name="GetOrder15" ReturnType="Collection(Database1Model.Order015)" />
+          <FunctionImport Name="GetOrder16" ReturnType="Collection(Database1Model.Order016)" />
+          <FunctionImport Name="GetOrder17" ReturnType="Collection(Database1Model.Order017)" />
+          <FunctionImport Name="GetOrder18" ReturnType="Collection(Database1Model.Order018)" />
+        </EntityContainer>
+        <ComplexType Name="Order01_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order02_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order03_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order04_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order05_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order06_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order07_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order08_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order09_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order10_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order11_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order12_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order13_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order14_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order15_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order16_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order17_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order18_Result">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order001">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order002">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order003">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order004">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order005">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order006">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order007">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order008">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order009">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order010">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order011">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order012">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order013">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order014">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order015">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order016">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order017">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Order018">
+          <Property Type="String" Name="Exercise" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="W" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+          <EntitySetMapping Name="Table_1">
+            <EntityTypeMapping TypeName="Database1Model.Table_1">
+              <MappingFragment StoreEntitySet="Table_1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="RM15" ColumnName="RM15" />
+                <ScalarProperty Name="WI15" ColumnName="WI15" />
+                <ScalarProperty Name="RM10" ColumnName="RM10" />
+                <ScalarProperty Name="WI10" ColumnName="WI10" />
+                <ScalarProperty Name="RM5" ColumnName="RM5" />
+                <ScalarProperty Name="WI5" ColumnName="WI5" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder01" FunctionName="Database1Model.Store.Order01">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order001">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder02" FunctionName="Database1Model.Store.Order02">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order002">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder03" FunctionName="Database1Model.Store.Order03">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order003">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder04" FunctionName="Database1Model.Store.Order04">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order004">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder05" FunctionName="Database1Model.Store.Order05">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order005">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder06" FunctionName="Database1Model.Store.Order06">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order006">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder07" FunctionName="Database1Model.Store.Order07">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order007">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder08" FunctionName="Database1Model.Store.Order08">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order008">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder09" FunctionName="Database1Model.Store.Order09">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order009">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder10" FunctionName="Database1Model.Store.Order10">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order010">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder11" FunctionName="Database1Model.Store.Order11">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order011">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder12" FunctionName="Database1Model.Store.Order12">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order012">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder13" FunctionName="Database1Model.Store.Order13">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order013">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder14" FunctionName="Database1Model.Store.Order14">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order014">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder15" FunctionName="Database1Model.Store.Order15">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order015">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder16" FunctionName="Database1Model.Store.Order16">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order016">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder17" FunctionName="Database1Model.Store.Order17">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order017">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetOrder18" FunctionName="Database1Model.Store.Order18">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Order018">
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="W" ColumnName="W" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,111 @@
+﻿<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">HST</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="@Url.Action("LearnMore", "Home")">Learn More</a></li>
+                <li><a href="@Url.Action("Notes", "Home")">Notes</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <h2>Step 1 - Max Rep Calculator</h2>
+    <p>
+        All maxes should be established before beginning the first cycle. Your maxes will determine what weights
+        you will use throughout the entire cycle. Find your 15 rep, 10 rep, and 5 rep max lifts for each exercise
+        you are going to use. <b>For the second cycle simply add 5-10 pounds to all lifts.</b>
+    </p>
+
+    <p>
+        To calculate you max reps for the given rep ranges click the calculate button, follow the instructions
+        and work through the following steps.
+    </p>
+    <p><a class="btn btn-success" href="@Url.Action("Create", "Table_1")">Calculate &raquo;</a></p>
+    <br>
+    <hr>
+    <br>
+    <h2>Step 2 - Complete the first cycle of the Program</h2>
+    <br>
+    <p>
+        Now all you need to do is follow the instructions given to you day by day until you have completed all six weeks
+        of the program.
+    </p>
+    <hr>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Weeks 1 & 2</h2>
+            <p>
+                Here you will complete you chosen exercises at the given weight each day for 15 reps.
+            </p>
+            <p><a class="btn btn-danger" href="@Url.Action("Weeks12", "GetStarted")">Go &raquo;</a></p>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Weeks 3 & 4 </h2>
+            <p>
+                Here you will complete you chosen exercises at the given weight each day for 10 reps.
+            </p>
+            <p><a class="btn btn-danger" href="@Url.Action("Weeks34", "GetStarted")">Go &raquo;</a></p>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Weeks 5 & 6</h2>
+            <p>
+                Here you will complete you chosen exercises at the given weight each day for 5 reps.
+            </p>
+            <p><a class="btn btn-danger" href="@Url.Action("Weeks56", "GetStarted")">Go &raquo;</a></p>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Step 3 - Strategic Deconditioning</h2>
+            <p>
+                Strategic Deconditioning - We are taking a week off to reprime out muscles for hypertrophy.
+                We will be adding 5-10lbs on the next cycle. 
+            </p>
+            <p>
+                See step 4.
+            </p>
+
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Step 4 - Complete the second cycle of the program</h2>
+            <p>
+                To complete the second cycle of the program you must simply add 5-10lbs ~ (2.25-5kg) to each exercise,
+                this can easily be achieved by adding the extra weight to you Rep Maxes and keeping the weighht incriment
+                the same as the first cycle.
+            </p>
+            <br>
+            <p><a class="btn btn-warning" href="@Url.Action("Index", "Table_1")">Click Here To Make Changes &raquo;</a></p>
+                            
+                       
+
+        </div>
+    </div>
+
+   

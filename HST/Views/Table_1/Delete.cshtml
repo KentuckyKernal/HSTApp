@@ -1,0 +1,100 @@
+﻿@model HST.Models.Table_1
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">HST</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="@Url.Action("LearnMore", "Home")">Learn More</a></li>
+                <li><a href="@Url.Action("Notes", "Home")">Notes</a></li>
+                <li><a href="@Url.Action("GetStarted", "Home")">Get Started</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<h2>Delete</h2>
+<br>
+<h4>Are you sure you want to delete this entry?</h4>
+<br>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Exercise)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exercise)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RM15)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RM15)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WI15)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WI15)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RM10)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RM10)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WI10)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WI10)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RM5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RM5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WI5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WI5)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

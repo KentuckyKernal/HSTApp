@@ -1,0 +1,152 @@
+﻿@model HST.Models.Table_1
+
+@{
+    ViewBag.Title = "Create";
+}
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">HST</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="@Url.Action("LearnMore", "Home")">Learn More</a></li>
+                <li><a href="@Url.Action("Notes", "Home")">Notes</a></li>
+                <li><a href="@Url.Action("GetStarted", "Home")">Get Started</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+<h2><b>Add Resistance Exercises</b></h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <br>
+        <hr>
+        <br>
+        <h4>Below you will see a list of feilds where you <u>must</u> enter a resistance exercise, your 15/10/5 rep maxes(RM) and how much you to increment the weight each workout(WI).</h4>
+        <br>
+         <h4>Each body part should be exercised with one of the following exercises</h4>
+        <br>
+        <ul>
+            <li>
+               <b> Legs</b> - Squat & Stiff Leg Deadlifts or Leg press & Leg Curls
+            </li>
+            <li>
+                <b>Calves</b> - Straight Leg Calf Raise
+            </li>
+            <li>
+                <b>Chest</b> - Bench Press(Slight Incline) & Dips (use Dumbells If Your Shoulders Bother You)
+            </li>
+            <li>
+               <b> Back</b> - Chins (W & N Grip) & Seated Or Bent Over Row(W & N Grip)
+            </li>
+            <li>
+                <b>Shoulders</b> - Lateral Raise(Rear) & Shoulder Press
+            </li>
+            <li>
+                <b>Biceps</b> - Any Single Curling Movement Per Session (Switch It Frequently)
+            </li>
+            <li>
+                <b>Traps</b> - Shrugs
+            </li>
+            <li>
+                <b>Triceps</b> - Push-Down Or Lying Tricep Extension
+            </li>
+            <li>
+                <b>Torso</b> - Crunch(W/Weight) Or Machine
+            </li>
+
+        </ul>
+        <br>
+        <h4>You should end up with atleast but you are not limited to 9 exercises for each day</h4>
+        <br>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Exercise, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Exercise, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Exercise, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RM15, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.RM15, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.RM15, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WI15, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.WI15, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.WI15, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RM10, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.RM10, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.RM10, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WI10, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.WI10, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.WI10, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RM5, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.RM5, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.RM5, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WI5, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.WI5, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.WI5, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-success" />
+            </div>
+        </div>
+        
+    </div>
+
+}
+    <br>
+    <p>If you want to check, edit or delete any of your entries click the link below </p>
+    <br>
+<div>
+    <p><a class="btn btn-warning" href="@Url.Action("Index", "Table_1")">List of Exercises &raquo;</a></p>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
